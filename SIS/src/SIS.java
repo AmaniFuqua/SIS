@@ -124,7 +124,7 @@ public class SIS
 							}
 						else if ( sortChoice==3)
 							{
-								System.out.println("link period method");
+								sortByPeriod();
 							}
 						else
 							{
