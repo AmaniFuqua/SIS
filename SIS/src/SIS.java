@@ -33,10 +33,7 @@ public class SIS
 				//for loop through get grade use if else to add a certain number to gpa
 				// make a seperate array list for gpa ):
 				// 
-				System.out.println("Please workkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
-
-				
-				System.out.println("Please workkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
+			
 
 				System.out.println(roster.size());
 			
@@ -48,7 +45,9 @@ public class SIS
 
 			
 			}
+		
 		public static void fillArray()
+
 
 		{
 			String file1 = "StudentList.txt"; 
@@ -82,6 +81,8 @@ public class SIS
 					e.printStackTrace();
 				}
 		}	
+		
+		
 		public static void menu()
 			{
 				System.out.println();
@@ -114,7 +115,7 @@ public class SIS
 						if ( sortChoice==1)
 							{
 								SortStudent.sortByLastName();
-								int classNum =1;
+								int classNum = 1;
 								for(Student s: SortStudent.sortByLastName())
 								{
 									System.out.println(classNum+" "+ s.getFirstName()+ " "+ s.getLastName() + " " +  s.getGpa()+  " " + s.getPeriod1()+ " "+ s.getGrade1()+ " " + s.getPeriod2()+ " "+ s.getGrade2()+ " " + s.getPeriod3()+ " "+ s.getGrade3());
@@ -127,11 +128,31 @@ public class SIS
 							}
 						else if ( sortChoice==3)
 							{
+
+							System.out.println("Which period do you want to sort by?");
+							System.out.println("1) ");
+							System.out.println("2) ");
+							System.out.println("3) ");
+							int sortPeriodChoice = user.nextInt();
+							
+							//if choice == 1 then period 1
+							// else if choice == 2 then period 2
+							//else if 3 then period 3
+							SortStudent.sortByPeriod1();
+							int classNum =1;
+							for(Student s: SortStudent.sortByLastName()) 
+								{
+									System.out.println(classNum+" "+ s.getFirstName()+ " "+ s.getLastName() + " " +  s.getGpa()+  " " + s.getPeriod1()+ " "+ s.getGrade1()+ " " + s.getPeriod2()+ " "+ s.getGrade2()+ " " + s.getPeriod3()+ " "+ s.getGrade3());
+									classNum ++;
+								}
+
 								sortByPeriod();
+
 							}
 						else
 							{
 								System.out.println("Error, please try again");
+								menu();
 							}
 						
 					}	
@@ -139,22 +160,6 @@ public class SIS
 
 			
 
-
-
-		//public static ArrayList<Student> sortByLastName()
-		//{
-		//	ArrayList <String> sorted = new ArrayList <String>();
-			
-		//	for (int i = 0; i < SIS.roster.size(); i++)
-		//	{
-//				sorted.add(SIS.roster.next().getLastName());
-		//	}
-			
-		//	Collections.sort(sorted);
-		//return sorted;
-		
-		//
-		//}
 	}
 
 		

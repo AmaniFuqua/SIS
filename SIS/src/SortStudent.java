@@ -17,6 +17,21 @@ public class SortStudent
 
 	}
 	
+
+	public static ArrayList<Student> sortByPeriod1()
+	{
+		ArrayList <Student> sortedBy1 = new ArrayList <Student>();
+		
+		
+		for(Student s: SIS.roster)
+		{
+			sortedBy1.add(s);
+		}
+		
+		Collections.sort(sortedBy1, new Period1Sort());
+		
+		return sortedBy1;
+
 	public static void sortByPeriod()
 	{
 		System.out.println("Which period do you want to sort by? 1, 2, or 3?");
@@ -53,6 +68,7 @@ public class SortStudent
 		Collections.sort(sortedPeriod1, new SortingPeriod1());
 		return sortedPeriod1;
 		
+
 	}
 	
 	
