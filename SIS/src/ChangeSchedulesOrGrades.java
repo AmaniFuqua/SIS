@@ -76,6 +76,21 @@ public class ChangeSchedulesOrGrades
 				c=user.nextInt();
 			}
 		
+		int changeGPA=0;
+		ArrayList <String> calcu = new ArrayList <String>();
+		calcu.add(SIS.roster.get(p).getGrade1());
+		calcu.add(SIS.roster.get(p).getGrade2());
+		calcu.add(SIS.roster.get(p).getGrade3());
+		
+		for(int i=0; i<calcu.size(); i++)
+			{
+				if(calcu.equals("A+"))
+					{
+						changeGPA+=4.30;
+					}
+			}
+		
+		
 		
 		System.out.println("Would you like to 1) Change another students grades or 2) Return to Menu?");
 		int f= user.nextInt();

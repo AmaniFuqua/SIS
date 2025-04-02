@@ -32,13 +32,18 @@ public class SIS
 
 				//for loop through get grade use if else to add a certain number to gpa
 				// make a seperate array list for gpa ):
+
 				// 
-			
+				System.out.println("WTFFFFFFFFFF");
+				System.out.println("WTFFFFFFFFFF");
+
 
 				System.out.println(roster.size());
+
+				
+				//System.out.println(roster.size());
+
 			
-
-
 				fillArray();
 				menu();
 				SortStudent.sortByLastName();
@@ -68,7 +73,7 @@ public class SIS
 					for (Student k : roster)
 						{
 							classNum++;
-							System.out.println(classNum+" "+ k.getFirstName()+ " "+ k.getLastName() + " " +  k.getGpa()+  " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
+							System.out.println(classNum+") "+ k.getFirstName()+ " "+ k.getLastName() + " " +  k.getGpa()+  " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
 
 						}
 					
